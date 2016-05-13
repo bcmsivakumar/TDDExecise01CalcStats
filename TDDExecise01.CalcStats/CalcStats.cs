@@ -47,5 +47,10 @@ namespace TDDExecise01CalcStats
             }
             return min;
         }
+
+        public int? Max()
+        {
+            return null;
+        }
     }
 }

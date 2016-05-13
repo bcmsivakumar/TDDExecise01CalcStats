@@ -5,12 +5,12 @@ using TDDExecise01CalcStats;
 namespace TDDExceise01CalcStats.Tests
 {
     [TestClass]
-    public class CalcStatsTest
+    public class MinCalcStatsTest
     {
         #region "Min Value Test Cases"
         [TestMethod]
         [ExpectedException(typeof(NullReferenceException))]
-        public void MinValue_Without_ClassInstance()
+        public void Min_Without_ClassInstance()
         {
             CalcStats calcStat = null;
             int? minValue = calcStat.Min();
@@ -18,7 +18,7 @@ namespace TDDExceise01CalcStats.Tests
         }
 
         [TestMethod]
-        public void MinValue_With_ClassInstance_with_ParameterlessConstructor()
+        public void Min_With_ClassInstance_with_ParameterlessConstructor()
         {
             CalcStats calcStat = new CalcStats();
             int? minValue = calcStat.Min();
@@ -27,7 +27,7 @@ namespace TDDExceise01CalcStats.Tests
         }
 
         [TestMethod]
-        public void MinValue_With_ClassInstance_with_ParameterisedConstructor_NullAsSequenceNumber()
+        public void Min_With_ClassInstance_with_ParameterisedConstructor_NullAsSequenceNumber()
         {
             CalcStats calcStat = new CalcStats(null);
             int? minValue = calcStat.Min();
@@ -36,7 +36,7 @@ namespace TDDExceise01CalcStats.Tests
         }        
 
         [TestMethod]
-        public void MinValue_With_EmptySequenceNumber()
+        public void Min_With_EmptySequenceNumber()
         {
             CalcStats calcStat=new CalcStats(new int[] { });
             int? minValue = calcStat.Min();
@@ -45,7 +45,7 @@ namespace TDDExceise01CalcStats.Tests
         }
 
         [TestMethod]
-        public void MinValue_With_SingleSequenceNumber()
+        public void Min_With_SingleSequenceNumber()
         {
             CalcStats calcStat = new CalcStats(new int[] { 2 });
             int? minValue = calcStat.Min();
@@ -54,7 +54,7 @@ namespace TDDExceise01CalcStats.Tests
         }
 
         [TestMethod]
-        public void MinValue_with_TwoSequenceNumbers()
+        public void Min_with_TwoSequenceNumbers()
         {
             CalcStats calcStat = new CalcStats(new int[] { 2, 1 });
             int? minValue = calcStat.Min();
@@ -63,7 +63,7 @@ namespace TDDExceise01CalcStats.Tests
         }
 
         [TestMethod]
-        public void MinValue_With_MoreThanTwoSequenceNumbers()
+        public void Min_With_MoreThanTwoSequenceNumbers()
         {
             CalcStats calcStat = new CalcStats(new int[] { 200000,243344,2,3423423,-444555,6666,44 });
             int? minValue = calcStat.Min();
@@ -72,6 +72,5 @@ namespace TDDExceise01CalcStats.Tests
         }
 
         #endregion        
-
     }
 }
