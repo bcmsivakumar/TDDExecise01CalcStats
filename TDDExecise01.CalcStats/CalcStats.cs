@@ -26,20 +26,24 @@ namespace TDDExecise01CalcStats
             {
                 min = null;
             }
-            else if (sequenceNumbers.Length == 1)
-            {
-                min = sequenceNumbers[0];
-            }
-            else if(sequenceNumbers.Length==2)
-            {
-                if(sequenceNumbers[0]<sequenceNumbers[1])
+            else {
+                int? temp = null;
+                for (int i = 0; i < sequenceNumbers.Length; i++)
                 {
-                    min = sequenceNumbers[0];
+                    if (i == 0)
+                    {
+                        temp = sequenceNumbers[i];
+                    }
+                    else
+                    {
+                        if (sequenceNumbers[i] < temp)
+                        {
+                            temp = sequenceNumbers[i];
+                        }
+                    }
                 }
-                else
-                {
-                    min = sequenceNumbers[1];
-                }
+
+                min = temp;
             }
             return min;
         }

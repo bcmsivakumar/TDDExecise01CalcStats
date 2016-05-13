@@ -7,6 +7,7 @@ namespace TDDExceise01CalcStats.Tests
     [TestClass]
     public class CalcStatsTest
     {
+        #region "Min Value Test Cases"
         [TestMethod]
         [ExpectedException(typeof(NullReferenceException))]
         public void MinValue_Without_ClassInstance()
@@ -60,6 +61,17 @@ namespace TDDExceise01CalcStats.Tests
 
             Assert.AreEqual(1, minValue);
         }
+
+        [TestMethod]
+        public void MinValue_With_MoreThanTwoSequenceNumbers()
+        {
+            CalcStats calcStat = new CalcStats(new int[] { 200000,243344,2,3423423,-444555,6666,44 });
+            int? minValue = calcStat.Min();
+
+            Assert.AreEqual(-444555, minValue);
+        }
+
+        #endregion        
 
     }
 }
