@@ -50,7 +50,16 @@ namespace TDDExecise01CalcStats
 
         public int? Max()
         {
-            return null;
+            int? maxValue = null;
+            if (sequenceNumbers == null)
+            {
+                maxValue = null;
+            }
+            else if (sequenceNumbers.Length == 1)
+            {
+                maxValue = sequenceNumbers[0];
+            }
+            return maxValue;
         }
     }
 }
