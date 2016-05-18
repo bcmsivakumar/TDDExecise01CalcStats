@@ -59,7 +59,15 @@ namespace TDDExecise01CalcStats
             {
                 maxValue = sequenceNumbers[0];
             }
+            else if (sequenceNumbers.Length == 2)
+            {
+                if (sequenceNumbers[0] > sequenceNumbers[1])
+                    maxValue = sequenceNumbers[0];
+                else
+                    maxValue = sequenceNumbers[1];
+            }
             return maxValue;
         }
+
     }
 }
