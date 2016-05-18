@@ -47,5 +47,17 @@ namespace TDDExceise01CalcStats.Tests
 
             Assert.AreEqual(343, maxValue);
         }
+
+        [TestMethod]
+        public void Max_With_MoreThanTwoSequenceNumbers()
+        {
+            CalcStats calcStats = new CalcStats(new int[] { 343, -1, 4324, 3434, 22 });
+            var maxValue = calcStats.Max();
+
+            Assert.AreEqual(4324, maxValue);
+        }
+
+
+
     }
 }
