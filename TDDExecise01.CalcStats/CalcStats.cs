@@ -73,7 +73,7 @@ namespace TDDExecise01CalcStats
             }
             return maxValue;
         }
-        
+
         public int Count()
         {
             return sequenceNumbers.Length;
@@ -81,7 +81,17 @@ namespace TDDExecise01CalcStats
 
         public double? Average()
         {
-            return null;
+            double? averageValue = null;
+
+            if (sequenceNumbers == null)
+            {
+                return null;
+            }
+
+            if (sequenceNumbers.Length == 0)
+                throw new IndexOutOfRangeException("Invalid input.Sequnce doesn't contains any number");
+
+            return averageValue;
         }
 
     }

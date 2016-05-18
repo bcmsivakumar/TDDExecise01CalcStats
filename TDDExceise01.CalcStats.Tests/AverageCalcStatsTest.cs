@@ -18,6 +18,16 @@ namespace TDDExceise01CalcStats.Tests
             double? averageValue = calcStat.Average();
 
             Assert.AreEqual(null, averageValue);
-        }        
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
+        public void Average_With_EmptySequenceNumber()
+        {
+            CalcStats calcStat = new CalcStats(new int[] { });
+            double? averageValue = calcStat.Average();
+
+            Assert.AreEqual(0, averageValue);
+        }
     }
 }
