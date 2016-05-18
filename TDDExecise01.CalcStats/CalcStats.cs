@@ -91,13 +91,30 @@ namespace TDDExecise01CalcStats
             if (sequenceNumbers.Length == 0)
                 throw new IndexOutOfRangeException("Invalid input.Sequnce doesn't contains any number");
 
-            if (sequenceNumbers.Length == 1)
+            int sum = 0;
+            for (int i = 0; i < sequenceNumbers.Length; i++)
             {
-                averageValue = sequenceNumbers[0] / sequenceNumbers.Length;
+                sum = sum + sequenceNumbers[i];
             }
-            else {
-                averageValue = (double)(sequenceNumbers[0] + sequenceNumbers[1]) / sequenceNumbers.Length;
+
+            averageValue = (double)(sum) / sequenceNumbers.Length;
+            var str = averageValue.ToString().Split('.');
+            var decimalPointValue = "";
+
+            if (str.Length == 2)
+            {
+                if (str[1].Length > 6)
+                {
+                    decimalPointValue = str[1].Substring(0, 6);
+                }
+                else
+                {
+                    decimalPointValue = str[1];
+                }
             }
+
+            var decimalValue = str[0] + "." + decimalPointValue;
+            averageValue = Convert.ToDouble(decimalValue);
 
             return averageValue;
         }
