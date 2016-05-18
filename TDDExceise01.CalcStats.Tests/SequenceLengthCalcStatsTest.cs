@@ -28,5 +28,14 @@ namespace TDDExceise01CalcStats.Tests
 
             Assert.AreEqual(1, length);
         }
+
+        [TestMethod]
+        public void Count_MoreThanOneSequence()
+        {
+            CalcStats calcStat = new CalcStats(new int[] { 2, -3, 1 });
+            int length = calcStat.Count();
+
+            Assert.AreEqual(3, length);
+        }
     }
 }
