@@ -79,5 +79,10 @@ namespace TDDExecise01CalcStats
             return sequenceNumbers.Length;
         }
 
+        public double? Average()
+        {
+            return null;
+        }
+
     }
 }
