@@ -38,5 +38,14 @@ namespace TDDExceise01CalcStats.Tests
 
             Assert.AreEqual(2, averageValue);
         }
+
+        [TestMethod]
+        public void Average_With_TwoSequnceNumbers()
+        {
+            CalcStats calcStat = new CalcStats(new int[] { 2, 3 });
+            double? averageValue = calcStat.Average();
+
+            Assert.AreEqual(2.5, averageValue);
+        }
     }
 }
