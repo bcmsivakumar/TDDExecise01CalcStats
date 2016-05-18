@@ -18,6 +18,15 @@ namespace TDDExceise01CalcStats.Tests
             int length = calcStat.Count();
 
             Assert.AreEqual(0, length);
-        }        
+        }
+
+        [TestMethod]
+        public void Count_OneSequence()
+        {
+            CalcStats calcStat = new CalcStats(new int[] { 2 });
+            int length = calcStat.Count();
+
+            Assert.AreEqual(1, length);
+        }
     }
 }

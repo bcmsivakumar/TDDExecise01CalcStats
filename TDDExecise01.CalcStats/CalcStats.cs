@@ -76,7 +76,7 @@ namespace TDDExecise01CalcStats
         
         public int Count()
         {
-            return 0;
+            return sequenceNumbers.Length;
         }
 
     }
