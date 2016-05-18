@@ -90,6 +90,8 @@ namespace TDDExecise01CalcStats
 
             if (sequenceNumbers.Length == 0)
                 throw new IndexOutOfRangeException("Invalid input.Sequnce doesn't contains any number");
+            if (sequenceNumbers.Length == 1)
+                averageValue = sequenceNumbers[0] / sequenceNumbers.Length;
 
             return averageValue;
         }

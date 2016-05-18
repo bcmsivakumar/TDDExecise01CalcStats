@@ -29,5 +29,14 @@ namespace TDDExceise01CalcStats.Tests
 
             Assert.AreEqual(0, averageValue);
         }
+
+        [TestMethod]
+        public void Average_With_OneSequnceNumber()
+        {
+            CalcStats calcStat = new CalcStats(new int[] { 2 });
+            double? averageValue = calcStat.Average();
+
+            Assert.AreEqual(2, averageValue);
+        }
     }
 }
