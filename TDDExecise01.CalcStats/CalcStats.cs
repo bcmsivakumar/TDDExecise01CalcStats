@@ -73,6 +73,11 @@ namespace TDDExecise01CalcStats
             }
             return maxValue;
         }
+        
+        public int Count()
+        {
+            return 0;
+        }
 
     }
 }

@@ -53,6 +53,7 @@
     <Compile Include="MaxCalcStatsTest.cs" />
     <Compile Include="MinCalcStatsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SequenceLengthCalcStatsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TDDExecise01.CalcStats\TDDExecise01CalcStats.csproj">
